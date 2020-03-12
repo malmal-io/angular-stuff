@@ -1,5 +1,5 @@
 {
-  "name": "@malmal/angular-stuff",
+  "name": "@malmal-io/angular-stuff",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
