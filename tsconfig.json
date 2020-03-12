@@ -14,7 +14,13 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "lazy-load-component": [
+        "dist/lazy-load-component/lazy-load-component",
+        "dist/lazy-load-component"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
