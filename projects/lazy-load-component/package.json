@@ -1,5 +1,11 @@
 {
-  "name": "lazy-load-component",
+  "name": "@malmal/lazy-load-component",
+  "author": {
+    "email": "lucas@merlins.media",
+    "name": "Lucas Meurer",
+    "url": "https://merlins.media/"
+  },
+  "private": false,
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^9.0.6",
