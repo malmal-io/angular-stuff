@@ -15,7 +15,6 @@ export class AppComponent {
   constructor() {}
 
   eventHandler = (data) => {
-    console.log(this.eventData);
     this.eventData = data;
   }
 }
