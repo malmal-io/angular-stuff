@@ -1,6 +1,11 @@
 <router-outlet></router-outlet>
 
-<button (click)="load = true">load</button>
+<button (click)="load = !load">load</button>
 
 
-<mm-lazy *ngIf="load" [id]="'test'"></mm-lazy>
+<mm-lazy *ngIf="load" [id]="'test'" [inputs]="{text: 'text'}" [outputs]="{coolEvent: eventHandler}"></mm-lazy>
+<div>
+
+  The event data is: {{eventData}}
+
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +9,13 @@ export class AppComponent {
   title = 'example-app';
 
   load = false;
+
+  eventData;
+
+  constructor() {}
+
+  eventHandler = (data) => {
+    console.log(this.eventData);
+    this.eventData = data;
+  }
 }

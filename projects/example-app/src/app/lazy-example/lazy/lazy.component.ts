@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-lazy',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lazy.component.scss']
 })
 export class LazyComponent implements OnInit {
+
+  @Input()
+  text: string;
+
+  @Output()
+  coolEvent = new EventEmitter();
 
   constructor() { }
 
