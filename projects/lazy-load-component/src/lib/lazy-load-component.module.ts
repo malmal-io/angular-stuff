@@ -1,4 +1,4 @@
-import {InjectionToken, ModuleWithProviders, NgModule} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular/core';
 import {DynamicModule} from 'ng-dynamic-component';
 import {ModuleInfo} from './module-info';
 import {LazyLoadComponent} from './lazy-load/lazy-load.component';

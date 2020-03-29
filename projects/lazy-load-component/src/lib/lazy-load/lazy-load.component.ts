@@ -10,10 +10,16 @@ import {
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import {InputsType, OutputsType} from 'ng-dynamic-component/lib/io.service';
 import {ModuleInfo} from '../module-info';
 import {ResolveComponent} from '../resolve-component';
 import {LAZY_LOAD_COMPONENT_REGISTRY} from '../constants';
+
+export interface InputsType {
+  [k: string]: any;
+}
+export interface OutputsType {
+  [k: string]: () => {};
+}
 
 @Component({
   selector: 'mm-lazy',
