@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Compiler,
   Component,
   Inject,
@@ -24,9 +25,10 @@ export interface OutputsType {
 @Component({
   selector: 'mm-lazy',
   templateUrl: './lazy-load.component.html',
-  styleUrls: ['./lazy-load.component.css']
+  styleUrls: ['./lazy-load.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LazyLoadComponent implements OnInit, AfterViewInit {
+export class LazyLoadComponent implements AfterViewInit {
 
   @ViewChild('lazyContainer', {static: true, read: ViewContainerRef})
   container: ViewContainerRef;
@@ -41,19 +43,13 @@ export class LazyLoadComponent implements OnInit, AfterViewInit {
 
   constructor(@Inject(LAZY_LOAD_COMPONENT_REGISTRY) private registry: ModuleInfo[],
               private compiler: Compiler,
-              private injector: Injector) {
-  }
-
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.loadFeature();
-    }, 100);
+              private injector: Injector,
+              private cdr: ChangeDetectorRef) {
   }
 
   ngAfterViewInit(): void {
     this.loadFeature();
   }
-
 
   loadFeature() {
 
@@ -66,6 +62,7 @@ export class LazyLoadComponent implements OnInit, AfterViewInit {
         // Create a moduleRef, resolve an entry component, create the component
         const moduleRef = moduleFactory.create(this.injector);
         this.component = moduleRef.instance.resolveComponent();
+        this.cdr.markForCheck();
       });
     });
   }

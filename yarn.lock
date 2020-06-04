@@ -5176,11 +5176,6 @@ latest-version@^5.0.0:
   dependencies:
     package-json "^6.3.0"
 
-"lazy-load-component@file:projects/lazy-load-component":
-  version "0.0.1"
-  dependencies:
-    ng-dynamic-component "^6.0.0"
-
 lcid@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-2.0.0.tgz#6ef5d2df60e52f82eb228a4c373e8d1f397253cf"
@@ -5755,11 +5750,6 @@ neo-async@^2.5.0, neo-async@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
   integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
-
-ng-dynamic-component@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/ng-dynamic-component/-/ng-dynamic-component-6.0.0.tgz#71a7770f3f56e2d8abd0535186e7724216f632a2"
-  integrity sha512-soZdXYd7oWivBuJOEpyTos5Mkp0/y3Dyjl1JPahSnevdozDgY/dqBkPHzkSllCbOQaCxllFjqYy+B0rOQaOolA==
 
 ng-packagr@^9.0.0:
   version "9.0.3"
